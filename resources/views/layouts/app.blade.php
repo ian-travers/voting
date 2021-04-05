@@ -16,9 +16,9 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
-<body class="font-sans text-gray-900 text-sm antialiased">
+<body class="bg-gray-background font-sans text-gray-900 text-sm antialiased">
 <header class="px-8 py-4 flex items-center justify-between">
-    <a href="#">Voting Logo</a>
+    <a href="/"><img src="{{ asset('images/logo.svg') }}" alt="logo"></a>
     <div class="flex items-center">
         @if (Route::has('login'))
             <div class="px-6 py-4">
