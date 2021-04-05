@@ -46,8 +46,13 @@
 </header>
 
 <!-- Page Content -->
-<main>
-    {{ $slot }}
+<main class="container flex mx-auto max-w-custom">
+    <div class="w-70 mr-5">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur dolore est excepturi facilis id, ipsum libero minus mollitia neque nobis numquam provident quisquam, sit tenetur ullam voluptas? Alias, consequuntur, corporis dignissimos dolores, dolorum eos est fuga fugit inventore laudantium modi nobis repellendus sit. Adipisci, architecto blanditiis consequatur dicta eum ipsum laboriosam libero maxime minima modi nihil nisi non obcaecati officiis rem repellat repellendus similique vel?
+    </div>
+    <div class="w-175">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi fuga molestias nulla optio! A ab ad aut, autem consectetur eligendi, explicabo illum impedit, in iure nobis odit provident qui quibusdam quod quos repellat sed! Animi aperiam, commodi dolores hic incidunt itaque neque quis sequi tenetur velit. Exercitationem facilis labore mollitia nemo odio, perferendis quod reiciendis rem soluta suscipit. Aliquam asperiores blanditiis cum, dolorem est et ex exercitationem ipsa iusto minima nulla numquam officiis omnis, pariatur quam quis reiciendis repellendus reprehenderit suscipit temporibus. Eius eligendi molestiae odio porro quis reprehenderit sint? Alias culpa delectus, deserunt dignissimos dolore dolorem enim, harum nam non nostrum numquam placeat possimus quis recusandae repellendus sed sunt temporibus voluptates. A atque, itaque laborum laudantium magnam minus mollitia placeat, ratione reiciendis rem saepe ut, vel! Animi architecto blanditiis dignissimos distinctio dolore eos illum in, itaque laudantium molestiae tenetur totam. A, aliquam dicta, ducimus enim eum fugiat id illum, impedit ipsum maxime odit pariatur quod reprehenderit similique tempora? A laborum maxime nesciunt repellat vel. Ad alias aspernatur beatae commodi delectus, deleniti, dolorem doloremque eum eveniet expedita explicabo fuga fugit illum labore laborum necessitatibus nisi numquam obcaecati odit officia provident quae qui quia quisquam rem reprehenderit repudiandae sapiente sequi sint sunt tenetur velit veniam veritatis vero vitae voluptas voluptate? Dignissimos, rerum.
+    </div>
 </main>
 </body>
 </html>
