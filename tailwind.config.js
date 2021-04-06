@@ -34,6 +34,10 @@ module.exports = {
             maxWidth: {
                 custom: '61.5rem',
             },
+            boxShadow: {
+                card: '3px 4px 15px 0 rgba(36, 37, 38, .08)',
+                dialog: '3px 4px 15px 0 rgba(36, 37, 38, .22)',
+            },
             fontFamily: {
                 sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
             },

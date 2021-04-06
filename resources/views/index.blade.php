@@ -28,7 +28,7 @@
     </div><!-- End filters -->
 
     <div class="ideas-container py-6 space-y-6">
-        <div class="idea-container bg-white rounded-lg flex hover:shadow-md transition duration-150 ease-in">
+        <div class="idea-container bg-white rounded-lg flex hover:shadow-card cursor-pointer transition duration-150 ease-in">
             <div class="px-5 py-8 border-r border-gray-100">
                 <div class="text-center">
                     <div class="font-semibold text-2xl">12</div>
@@ -84,7 +84,7 @@
                                             d="M2.97.061A2.969 2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97 2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 2.97 0 0021.03.06z"></path>
                                     </svg>
                                 </button>
-                                <ul class="absolute w-40 bg-white font-semibold shadow-lg rounded-lg py-2 ml-12">
+                                <ul class="absolute w-40 bg-white font-semibold shadow-dialog rounded-lg py-2 ml-12">
                                     <li>
                                         <a href="#" class="block hover:bg-gray-100 transition duration-150 ease-in px-5 py-2">Mark as Spam</a>
                                     </li>
