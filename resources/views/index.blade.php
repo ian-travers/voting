@@ -28,7 +28,7 @@
     </div><!-- End filters -->
 
     <div class="ideas-container py-6 space-y-6">
-        <div class="idea-container bg-white rounded-lg flex">
+        <div class="idea-container bg-white rounded-lg flex hover:shadow-md transition duration-150 ease-in">
             <div class="px-5 py-8 border-r border-gray-100">
                 <div class="text-center">
                     <div class="font-semibold text-2xl">12</div>
