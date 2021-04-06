@@ -51,7 +51,7 @@
                     <h4 class="text-xl font-semibold">
                         <a href="#" class="hover:underline">An idea title goes here</a>
                     </h4>
-                    <div class="mt-4 text-gray-600 ">
+                    <div class="mt-4 text-gray-600 line-clamp-3">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda doloribus, ea
                         earum, facilis ipsa iusto minus nisi numquam odio omnis quae quasi quibusdam quo reiciendis
                         totam voluptatem! Consequatur delectus dicta magni nesciunt sit. Ad animi consectetur
