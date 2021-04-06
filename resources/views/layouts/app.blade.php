@@ -48,7 +48,16 @@
 <!-- Page Content -->
 <main class="container flex mx-auto max-w-custom">
     <div class="w-70 mr-5">
-        <div class="bg-white border-2 border-blue mt-14 rounded-lg">
+        <div
+            class="bg-white border-2 border-blue mt-14 rounded-lg"
+            style="
+                border-image-source: linear-gradient(to bottom, rgba(50, 138, 241, 0.22), rgba(99, 123, 255, 0));
+                border-image-slice: 1;
+                background-image: linear-gradient(to bottom, #ffffff, #ffffff), linear-gradient(to bottom, rgba(50, 138, 241, 0.22), rgba(99, 123, 255, 0));
+                background-origin: border-box;
+                background-clip: content-box, border-box;
+            "
+        >
             <div class="text-base text-center px-6 py-2 pt-6">
                 <h3 class="font-semibold">Add an idea</h3>
                 <p class="text-xs mt-4">Let us know what you would like and we'll take a look over!</p>
