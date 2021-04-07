@@ -95,7 +95,7 @@
         </div>
     </div><!-- End buttons container -->
 
-    <div class="comments-container relative ml-22 space-y-6 my-6">
+    <div class="comments-container relative ml-22 space-y-6 pt-4 mt-1">
 
         <div class="comment-container relative bg-white rounded-lg flex mt-4">
             <div class="flex flex-1 px-4 py-6">
