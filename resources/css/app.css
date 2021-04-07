@@ -1,3 +1,39 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+/* vertical line to the left of the comments */
+.comments-container::before {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -40px;
+    content: "";
+    width: 3px;
+    height: 100%;
+    background: black;
+    opacity: .07;
+}
+
+.comment-container::before {
+    position: relative;
+    display: block;
+    top: 57px;
+    content: "";
+    width: 23px;
+    height: 3px;
+    background: black;
+    left: -40px;
+    opacity: .07;
+}
+
+.comment-container:last-child::after {
+    position: absolute;
+    display: block;
+    top: 60px;
+    left: -40px;
+    content: "";
+    width: 3px;
+    height: calc(100% - 60px);
+    background: #f7f8fc;
+}

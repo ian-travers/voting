@@ -95,9 +95,9 @@
         </div>
     </div><!-- End buttons container -->
 
-    <div class="comments-container ml-22 space-y-6 my-6">
+    <div class="comments-container relative ml-22 space-y-6 my-6">
 
-        <div class="comment-container bg-white rounded-lg flex mt-4">
+        <div class="comment-container relative bg-white rounded-lg flex mt-4">
             <div class="flex flex-1 px-4 py-6">
                 <div class="flex-none">
                     <a href="###">
@@ -144,7 +144,7 @@
                 </div>
             </div>
         </div><!-- End comment container -->
-        <div class="comment-container bg-white rounded-lg flex mt-4">
+        <div class="comment-container relative bg-white rounded-lg flex mt-4">
             <div class="flex flex-1 px-4 py-6">
                 <div class="flex-none">
                     <a href="###">
@@ -195,7 +195,7 @@
                 </div>
             </div>
         </div><!-- End comment container -->
-        <div class="comment-container bg-white rounded-lg flex mt-4">
+        <div class="comment-container relative bg-white rounded-lg flex mt-4">
             <div class="flex flex-1 px-4 py-6">
                 <div class="flex-none">
                     <a href="###">
