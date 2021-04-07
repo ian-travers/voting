@@ -72,12 +72,12 @@
     <div class="buttons-container flex items-center justify-between mt-6">
         <div class="flex items-center space-x-4 ml-6">
             <button type="button"
-                    class="w-32 h-11 text-white text-xs font-semibold bg-blue border border-blue hover:bg-blue-hover rounded-lg transition duration-150 ease-in">
+                    class="w-32 h-11 text-white text-sm font-semibold bg-blue border border-blue hover:bg-blue-hover rounded-lg transition duration-150 ease-in">
                 Reply
             </button>
             <button type="button"
-                    class="flex items-center justify-center w-32 h-11 text-xs font-semibold bg-gray-200 border border-gray-200 hover:border-gray-400 rounded-lg transition duration-150 ease-in">
-                <span>Set status</span>
+                    class="flex items-center justify-center w-32 h-11 text-sm font-semibold bg-gray-200 border border-gray-200 hover:border-gray-400 rounded-lg transition duration-150 ease-in">
+                <span>Set Status</span>
                 <svg class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                 </svg>
