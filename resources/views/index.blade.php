@@ -42,23 +42,17 @@
                     </button>
                 </div>
             </div>
-            <div class="flex px-2 py-6">
+            <div class="flex flex-1 px-2 py-6">
                 <a href="#" class="flex-none">
                     <img src="https://source.unsplash.com/200x200/?face&crop=face&v=1" alt="avatar"
                          class="w-14 h-14 rounded-lg">
                 </a>
-                <div class="mx-4">
+                <div class="mx-4 w-full">
                     <h4 class="text-xl font-semibold">
                         <a href="#" class="hover:underline">An idea title goes here</a>
                     </h4>
                     <div class="mt-4 text-gray-600 line-clamp-3">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda doloribus, ea
-                        earum, facilis ipsa iusto minus nisi numquam odio omnis quae quasi quibusdam quo reiciendis
-                        totam voluptatem! Consequatur delectus dicta magni nesciunt sit. Ad animi consectetur
-                        consequuntur ex, illo ipsum minus molestiae placeat qui reprehenderit. Aut consectetur ipsam
-                        laborum minima nostrum pariatur placeat recusandae similique tempore. Aliquid animi aspernatur
-                        atque, blanditiis doloribus ea facilis illo illum incidunt iure minus nobis nulla optio placeat
-                        praesentium similique voluptatibus. Consequuntur, illum in.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     </div>
 
                     <div class="flex items-center justify-between mt-6">
