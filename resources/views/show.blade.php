@@ -11,7 +11,7 @@
     <div class="idea-container bg-white rounded-lg flex mt-4">
         <div class="flex flex-1 px-4 py-6">
             <div class="flex-none">
-                <a href="###">
+                <a href="#">
                     <img src="https://source.unsplash.com/200x200/?face&crop=face&v=1" alt="avatar"
                          class="w-14 h-14 rounded-lg">
                 </a>
@@ -100,7 +100,7 @@
         <div class="comment-container relative bg-white rounded-lg flex mt-4">
             <div class="flex flex-1 px-4 py-6">
                 <div class="flex-none">
-                    <a href="###">
+                    <a href="#">
                         <img src="https://source.unsplash.com/200x200/?face&crop=face&v=2" alt="avatar"
                              class="w-14 h-14 rounded-lg">
                     </a>
@@ -147,7 +147,7 @@
         <div class="comment-container is-admin relative bg-white rounded-lg flex mt-4 bg-gradient-to-r from-gray-500 to-blue p-0.5">
             <div class="flex flex-1 px-4 py-6 w-full h-full bg-white rounded-md">
                 <div class="flex-none">
-                    <a href="###">
+                    <a href="#">
                         <img src="https://source.unsplash.com/200x200/?face&crop=face&v=3" alt="avatar"
                              class="w-14 h-14 rounded-lg">
                     </a>
@@ -198,7 +198,7 @@
         <div class="comment-container relative bg-white rounded-lg flex mt-4">
             <div class="flex flex-1 px-4 py-6">
                 <div class="flex-none">
-                    <a href="###">
+                    <a href="#">
                         <img src="https://source.unsplash.com/200x200/?face&crop=face&v=4" alt="avatar"
                              class="w-14 h-14 rounded-lg">
                     </a>
