@@ -16,7 +16,7 @@
 }
 
 .comment-container::before {
-    position: relative;
+    position: absolute;
     display: block;
     top: 57px;
     content: "";
@@ -39,6 +39,7 @@
 }
 
 .is-admin::before {
+    position: absolute;
     left: -58px;
     width: 38px;
     height: 38px;
