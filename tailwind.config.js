@@ -21,8 +21,8 @@ module.exports = {
                 'gray-background': '#f7f8fc',
                 'blue': '#328af1',
                 'blue-hover': '#2879bd',
-                'yellow': '#2879bd',
-                'red': '#ffc73c',
+                'yellow': '#ffc73c',
+                'red': '#b91c1c',
                 'green': '#1aab8b',
                 'purple': '#8b60ed',
 
@@ -30,6 +30,7 @@ module.exports = {
             spacing: {
                 22: '5.5rem',
                 70: '17.5rem',
+                104: '26rem',
                 175: '43.75rem',
             },
             maxWidth: {

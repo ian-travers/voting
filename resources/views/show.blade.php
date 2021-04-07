@@ -71,17 +71,111 @@
 
     <div class="buttons-container flex items-center justify-between mt-6">
         <div class="flex items-center space-x-4 ml-6">
-            <button type="button"
-                    class="w-32 h-11 text-white text-sm font-semibold bg-blue border border-blue hover:bg-blue-hover rounded-lg transition duration-150 ease-in">
-                Reply
-            </button>
-            <button type="button"
-                    class="flex items-center justify-center w-32 h-11 text-sm font-semibold bg-gray-200 border border-gray-200 hover:border-gray-400 rounded-lg transition duration-150 ease-in">
-                <span>Set Status</span>
-                <svg class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-            </button>
+            <div class="relative">
+                <button type="button"
+                        class="w-32 h-11 text-white text-sm font-semibold bg-blue border border-blue hover:bg-blue-hover rounded-lg transition duration-150 ease-in"
+                >
+                    Reply
+                </button>
+                <div
+                    class="absolute z-10 w-104 text-left font-semibold text-sm bg-white shadow-dialog rounded-lg mt-2">
+                    <form action="#" class="space-y-4 px-4 py-6">
+                        <div class="">
+                            <textarea name="post_comment" id="post_comment" cols="30" rows="4"
+                                      class="w-full text-sm bg-gray-100 rounded-lg placeholder-gray-700 border-none px-4 py-2"
+                                      placeholder="Go ahead,  don't be shy. Share your thoughts..."></textarea>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <button type="button"
+                                    class="w-1/2 h-11 text-white text-sm font-semibold bg-blue border border-blue hover:bg-blue-hover rounded-lg transition duration-150 ease-in"
+                            >
+                                Post Comment
+                            </button>
+                            <button type="button"
+                                    class="flex items-center justify-center w-32 h-11 text-xs font-semibold bg-gray-200 border border-gray-200 hover:border-gray-400 rounded-lg transition duration-150 ease-in">
+                                <svg class="h-5 w-5 text-gray-600 transform -rotate-45" fill="none" viewBox="0 0 24 24"
+                                     stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/>
+                                </svg>
+                                <span class="ml-1">Attach</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="relative">
+                <button type="button"
+                        class="flex items-center justify-center w-32 h-11 text-sm font-semibold bg-gray-200 border border-gray-200 hover:border-gray-400 rounded-lg transition duration-150 ease-in">
+                    <span>Set Status</span>
+                    <svg class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="absolute z-20 w-72 text-left font-semibold text-sm bg-white shadow-dialog rounded-lg mt-2">
+                    <form action="#" class="space-y-4 px-4 py-2">
+                        <div class="space-y-2">
+                            <label class="flex items-center">
+                                <input type="radio" checked class="bg-gray-200 text-gray-600 border-none"
+                                       name="status"
+                                       value="1">
+                                <span class="ml-2">Open</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" class="bg-gray-200 text-purple border-none" name="status"
+                                       value="2">
+                                <span class="ml-2">Considering</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" class="bg-gray-200 text-yellow border-none" name="status"
+                                       value="3">
+                                <span class="ml-2">In Progress</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" class="bg-gray-200 text-green border-none" name="status"
+                                       value="4">
+                                <span class="ml-2">Implemented</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" class="bg-gray-200 text-red border-none" name="status"
+                                       value="5">
+                                <span class="ml-2">Closed</span>
+                            </label>
+                        </div>
+
+                        <div>
+                            <textarea name="update_comment" id="update_comment" cols="30" rows="3"
+                                      class="w-full text-sm bg-gray-100 rounded-lg border-none placeholder-gray-700 px-4 py-2"
+                                      placeholder="Add an update comment (optional)"></textarea>
+                        </div>
+
+                        <div class="flex items-center justify-between space-x-3">
+                            <button type="button"
+                                    class="flex items-center justify-center w-1/2 h-11 text-xs font-semibold bg-gray-200 border border-gray-200 hover:border-gray-400 rounded-lg transition duration-150 ease-in"
+                            >
+                                <svg class="h-5 w-5 text-gray-600 transform -rotate-45" fill="none" viewBox="0 0 24 24"
+                                     stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/>
+                                </svg>
+                                <span class="ml-1">Attach</span>
+                            </button>
+                            <button type="submit"
+                                    class="flex items-center justify-center w-1/2 h-11 text-white text-xs font-semibold bg-blue border border-blue hover:bg-blue-hover rounded-lg transition duration-150 ease-in"
+                            >
+                                <span>Update</span>
+                            </button>
+                        </div>
+
+                        <label class="font-normal flex items-center">
+                            <input type="checkbox" class="bg-gray-200 rounded" name="notify_voters"
+                                   value="5">
+                            <span class="ml-2">Notify all voters</span>
+                        </label>
+                    </form>
+                </div>
+            </div>
         </div>
         <div class="flex items-center space-x-3">
             <div class="bg-white font-semibold text-center rounded-lg px-3 py-2">
@@ -108,7 +202,10 @@
 
                 <div class="mx-4 w-full">
                     <div class="text-gray-600">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem error iure magnam magni obcaecati quisquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum laborum rem repudiandae. Accusamus amet atque est harum, iste odio tempora? Eveniet, voluptatibus.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Autem error iure magnam magni obcaecati quisquam. Lorem ipsum
+                        dolor sit amet, consectetur adipisicing elit. Cum laborum rem repudiandae. Accusamus amet atque
+                        est harum, iste odio tempora? Eveniet, voluptatibus.
                     </div>
 
                     <div class="flex items-center justify-between mt-6">
@@ -144,7 +241,8 @@
                 </div>
             </div>
         </div><!-- End comment container -->
-        <div class="comment-container is-admin relative bg-white rounded-lg flex mt-4 bg-gradient-to-r from-gray-500 to-blue p-0.5">
+        <div
+            class="comment-container is-admin relative bg-white rounded-lg flex mt-4 bg-gradient-to-r from-gray-500 to-blue p-0.5">
             <div class="flex flex-1 px-4 py-6 w-full h-full bg-white rounded-md">
                 <div class="flex-none">
                     <a href="#">
@@ -159,7 +257,9 @@
                         <a href="#" class="hover:underline">Status changed to "Under consideration"</a>
                     </h4>
                     <div class="text-gray-600 mt-4">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum laborum rem repudiandae. Accusamus amet atque est harum, iste odio tempora? Eveniet, voluptatibus.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Cum laborum rem repudiandae. Accusamus amet atque est harum, iste
+                        odio tempora? Eveniet, voluptatibus.
                     </div>
 
                     <div class="flex items-center justify-between mt-6">
@@ -206,7 +306,10 @@
 
                 <div class="mx-4 w-full">
                     <div class="text-gray-600">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem error iure magnam magni obcaecati quisquam. Lorem ipsum dolor sit amet, consectetur. Accusamus amet atque est harum, iste odio tempora? Eveniet, voluptatibus.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Autem error iure magnam magni obcaecati quisquam. Lorem ipsum
+                        dolor sit amet, consectetur. Accusamus amet atque est harum, iste odio tempora? Eveniet,
+                        voluptatibus.
                     </div>
 
                     <div class="flex items-center justify-between mt-6">
