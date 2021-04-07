@@ -35,5 +35,16 @@
     content: "";
     width: 3px;
     height: calc(100% - 60px);
-    background: #f7f8fc;
+    background: theme(colors.gray-background);
+}
+
+.is-admin::before {
+    left: -58px;
+    width: 38px;
+    height: 38px;
+    border-radius: 38px;
+    border: 7px solid white;
+    box-shadow: 4px 4px 15px 0 rgba(37, 38, 39, .08);
+    background: theme(colors.purple);
+    opacity: 1;
 }

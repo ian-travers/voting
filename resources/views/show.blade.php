@@ -144,7 +144,7 @@
                 </div>
             </div>
         </div><!-- End comment container -->
-        <div class="comment-container relative bg-white rounded-lg flex mt-4">
+        <div class="comment-container is-admin relative bg-white rounded-lg flex mt-4">
             <div class="flex flex-1 px-4 py-6">
                 <div class="flex-none">
                     <a href="###">
