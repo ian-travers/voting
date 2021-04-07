@@ -11,8 +11,7 @@
     content: "";
     width: 3px;
     height: 100%;
-    background: black;
-    opacity: .07;
+    background: #edf0f5;
 }
 
 .comment-container::before {
@@ -22,9 +21,8 @@
     content: "";
     width: 23px;
     height: 3px;
-    background: black;
+    background: #edf0f5;
     left: -40px;
-    opacity: .07;
 }
 
 .comment-container:last-child::after {
