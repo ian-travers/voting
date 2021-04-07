@@ -43,10 +43,13 @@
                 </div>
             </div>
             <div class="flex flex-1 px-2 py-6">
-                <a href="#" class="flex-none">
-                    <img src="https://source.unsplash.com/200x200/?face&crop=face&v=1" alt="avatar"
-                         class="w-14 h-14 rounded-lg">
-                </a>
+                <div class="flex-none">
+                    <a href="###">
+                        <img src="https://source.unsplash.com/200x200/?face&crop=face&v=1" alt="avatar"
+                             class="w-14 h-14 rounded-lg">
+                    </a>
+                </div>
+
                 <div class="mx-4 w-full">
                     <h4 class="text-xl font-semibold">
                         <a href="#" class="hover:underline">An idea title goes here</a>
@@ -71,7 +74,7 @@
                             </div>
                             <div class="relative">
                                 <button
-                                    class="bg-gray-100 hover:bg-gray-200 rounded-full h-7 px-4 py-2 transition duration-150 ease-in">
+                                    class="bg-gray-100 hover:bg-gray-200 rounded-full border h-7 px-4 py-2 transition duration-150 ease-in">
                                     <svg class="text-gray-400 hover:text-gray-500" fill="currentColor" width="24"
                                          height="6">
                                         <path
