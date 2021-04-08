@@ -50,7 +50,7 @@
                     </a>
                 </div>
 
-                <div class="mx-4 w-full">
+                <div class="w-full flex flex-col justify-between mx-4 ">
                     <h4 class="text-xl font-semibold">
                         <a href="#" class="hover:underline">An idea title goes here</a>
                     </h4>
