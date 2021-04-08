@@ -9,15 +9,15 @@
     </div>
 
     <div class="idea-container bg-white rounded-lg flex mt-4">
-        <div class="flex flex-1 px-4 py-6">
-            <div class="flex-none">
+        <div class="flex flex-col md:flex-row flex-1 px-4 py-6">
+            <div class="flex-none mx-2 md:mx-4 md:mx-0">
                 <a href="#">
                     <img src="https://source.unsplash.com/200x200/?face&crop=face&v=1" alt="avatar"
                          class="w-14 h-14 rounded-lg">
                 </a>
             </div>
 
-            <div class="mx-4 w-full">
+            <div class="w-full mx-2 md:mx-4">
                 <h4 class="text-xl font-semibold">
                     <a href="#" class="hover:underline">An idea title goes here</a>
                 </h4>
@@ -25,10 +25,10 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 </div>
 
-                <div class="flex items-center justify-between mt-6">
+                <div class="flex flex-col md:flex-row md:items-center justify-between mt-6">
                     <div class="flex items-center text-xs font-semibold space-x-2 text-gray-400">
-                        <div class="font-bold text-gray-900">John Doe</div>
-                        <div>&bull;</div>
+                        <div class="hidden md:block font-bold text-gray-900">John Doe</div>
+                        <div class="hidden md:block">&bull;</div>
                         <div>10 hours ago</div>
                         <div>&bull;</div>
                         <div class="">Livewire</div>
@@ -36,7 +36,7 @@
                         <div class="text-gray-700">3 comments</div>
                     </div>
 
-                    <div class="flex items-center space-x-2">
+                    <div class="flex items-center space-x-2 mt-4 md:mt-0">
                         <div
                             class="bg-gray-200 text-xxs font-bold uppercase rounded-full text-center w-24 px-4 py-2 leading-none h-7">
                             Open
@@ -59,7 +59,7 @@
                                 x-show.transition="isOpen"
                                 @click.away="isOpen = false"
                                 @keydown.escape.window="isOpen = false"
-                                class="absolute w-40 bg-white font-semibold shadow-dialog rounded-lg py-2 ml-12"
+                                class="absolute z-10 w-40 bg-white font-semibold shadow-dialog rounded-lg right-0 md:left-0 md:ml-12 top-8 md:top-6 py-2"
                             >
                                 <li>
                                     <a href="#"
@@ -74,13 +74,27 @@
                             </ul>
                         </div>
                     </div>
+
+                    <div class="flex items-center md:hidden mt-4 md:mt-0">
+                        <div class="bg-gray-100 text-center rounded-lg h-10 px-4 py-2 pr-8">
+                            <div class="text-sm font-bold leading-none">
+                                12
+                            </div>
+                            <div class="text-xxs font-semibold leading-none text-gray-400">
+                                Votes
+                            </div>
+                        </div>
+                        <button class="w-20 bg-gray-200 border border-gray-200 font-bold text-xs uppercase rounded-lg hover:border-gray-400 transition ease-in px-4 py-3 -ml-5">
+                            Vote
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div><!-- End idea container -->
 
     <div class="buttons-container flex items-center justify-between mt-6">
-        <div class="flex items-center space-x-4 ml-6">
+        <div class="flex flex-col md:flex-row items-center md:space-x-4 ml-2 md:ml-6">
             <div
                 x-data="{ isOpen: false}"
                 class="relative"
@@ -97,7 +111,7 @@
                     x-show.transition="isOpen"
                     @click.away="isOpen = false"
                     @keydown.escape.window="isOpen = false"
-                    class="absolute z-10 w-104 text-left font-semibold text-sm bg-white shadow-dialog rounded-lg mt-2"
+                    class="absolute z-10 w-64 md:w-104 text-left font-semibold text-sm bg-white shadow-dialog rounded-lg mt-2"
                 >
                     <form action="#" class="space-y-4 px-4 py-6">
                         <div class="">
@@ -105,14 +119,14 @@
                                       class="w-full text-sm bg-gray-100 rounded-lg placeholder-gray-700 border-none px-4 py-2"
                                       placeholder="Go ahead,  don't be shy. Share your thoughts..."></textarea>
                         </div>
-                        <div class="flex items-center space-x-3">
+                        <div class="flex flex-col md:flex-row md:items-center md:space-x-3">
                             <button type="button"
-                                    class="w-1/2 h-11 text-white text-sm font-semibold bg-blue border border-blue hover:bg-blue-hover rounded-lg transition duration-150 ease-in"
+                                    class="w-full md:w-1/2 h-11 text-white text-sm font-semibold bg-blue border border-blue hover:bg-blue-hover rounded-lg transition duration-150 ease-in"
                             >
                                 Post Comment
                             </button>
                             <button type="button"
-                                    class="flex items-center justify-center w-32 h-11 text-xs font-semibold bg-gray-200 border border-gray-200 hover:border-gray-400 rounded-lg transition duration-150 ease-in">
+                                    class="flex items-center justify-center w-full md:w-32 h-11 text-xs font-semibold bg-gray-200 border border-gray-200 hover:border-gray-400 rounded-lg transition duration-150 ease-in mt-2 md:mt-0">
                                 <svg class="h-5 w-5 text-gray-600 transform -rotate-45" fill="none" viewBox="0 0 24 24"
                                      stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -127,7 +141,7 @@
 
             <div
                 x-data="{ isOpen: false }"
-                class="relative"
+                class="relative mt-2 md:mt-0"
             >
                 <button
                     @click="isOpen = !isOpen"
@@ -144,7 +158,7 @@
                     x-show.transition="isOpen"
                     @click.away="isOpen = false"
                     @keydown.escape.window="isOpen = false"
-                    class="absolute z-20 w-72 text-left font-semibold text-sm bg-white shadow-dialog rounded-lg mt-2"
+                    class="absolute z-20 w-64 md:w-72 text-left font-semibold text-sm bg-white shadow-dialog rounded-lg mt-2"
                 >
                     <form action="#" class="space-y-4 px-4 py-2">
                         <div class="space-y-2">
@@ -209,7 +223,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex items-center space-x-3">
+        <div class="hidden md:flex items-center space-x-3">
             <div class="bg-white font-semibold text-center rounded-lg px-3 py-2">
                 <div class="text-xl leading-snug">12</div>
                 <div class="text-xs leading-none text-gray-400">Votes</div>
@@ -221,18 +235,18 @@
         </div>
     </div><!-- End buttons container -->
 
-    <div class="comments-container relative ml-22 space-y-6 pt-4 mt-1">
+    <div class="comments-container relative md:ml-22 space-y-6 pt-4 mt-1">
 
         <div class="comment-container relative bg-white rounded-lg flex mt-4">
-            <div class="flex flex-1 px-4 py-6">
-                <div class="flex-none">
+            <div class="flex flex-col md:flex-row flex-1 px-4 py-6">
+                <div class="flex-none mx-4 md:mx-0">
                     <a href="#">
                         <img src="https://source.unsplash.com/200x200/?face&crop=face&v=2" alt="avatar"
                              class="w-14 h-14 rounded-lg">
                     </a>
                 </div>
 
-                <div class="mx-4 w-full">
+                <div class="mx-4 w-full mt-2 md:mt-0">
                     <div class="text-gray-600">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet,
                         consectetur adipisicing elit. Autem error iure magnam magni obcaecati quisquam. Lorem ipsum
@@ -265,7 +279,7 @@
                                 x-show.transition="isOpen"
                                 @click.away="isOpen = false"
                                 @keydown.escape.window="isOpen = false"
-                                class="absolute z-10 w-40 bg-white font-semibold shadow-dialog rounded-lg py-2 ml-12"
+                                class="absolute z-10 w-40 bg-white font-semibold shadow-dialog rounded-lg right-0 md:left-0 md:ml-12 top-8 md:top-6 py-2"
                             >
                                 <li>
                                     <a href="#"
@@ -285,13 +299,13 @@
         </div><!-- End comment container -->
         <div
             class="comment-container is-admin relative bg-white rounded-lg flex mt-4 bg-gradient-to-r from-gray-500 to-blue p-0.5">
-            <div class="flex flex-1 px-4 py-6 w-full h-full bg-white rounded-md">
-                <div class="flex-none">
+            <div class="flex flex-col md:flex-row flex-1 px-4 py-6 w-full h-full bg-white rounded-md">
+                <div class="flex-none mx-4 md:mx-0">
                     <a href="#">
                         <img src="https://source.unsplash.com/200x200/?face&crop=face&v=3" alt="avatar"
                              class="w-14 h-14 rounded-lg">
                     </a>
-                    <div class="text-center text-blue text-xxs font-bold uppercase mt-1">Admin</div>
+                    <div class="md:text-center text-blue text-xxs font-bold uppercase mt-1">Admin</div>
                 </div>
 
                 <div class="mx-4 w-full">
@@ -338,15 +352,15 @@
             </div>
         </div><!-- End comment container -->
         <div class="comment-container relative bg-white rounded-lg flex mt-4">
-            <div class="flex flex-1 px-4 py-6">
-                <div class="flex-none">
+            <div class="flex flex-col md:flex-row flex-1 px-4 py-6">
+                <div class="flex-none mx-4 md:mx-0">
                     <a href="#">
                         <img src="https://source.unsplash.com/200x200/?face&crop=face&v=4" alt="avatar"
                              class="w-14 h-14 rounded-lg">
                     </a>
                 </div>
 
-                <div class="mx-4 w-full">
+                <div class="mx-4 w-full mt-2 md:mt-0">
                     <div class="text-gray-600">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet,
                         consectetur adipisicing elit. Autem error iure magnam magni obcaecati quisquam. Lorem ipsum
