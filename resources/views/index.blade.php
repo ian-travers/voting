@@ -1,6 +1,6 @@
 <x-app-layout>
-    <div class="filters flex space-x-6">
-        <div class="w-1/4">
+    <div class="filters flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-6">
+        <div class="w-full md:w-1/4">
             <select name="category" id="category" class="w-full rounded-lg px-4 py-2 border-none">
                 <option value="programming">Programming</option>
                 <option value="css">Css</option>
@@ -8,7 +8,7 @@
                 <option value="alpinejs">Alpine JS</option>
             </select>
         </div>
-        <div class="w-1/4">
+        <div class="w-full md:w-1/4">
             <select name="difficulty" id="difficulty" class="w-full rounded-lg px-4 py-2 border-none">
                 <option value="beginner">Beginner</option>
                 <option value="intermediate">Intermediate</option>
@@ -16,7 +16,7 @@
             </select>
         </div>
 
-        <div class="relative w-1/2">
+        <div class="relative w-full md:w-1/2">
             <svg class="w-4 absolute flex items-center h-full top-0 ml-2 text-gray-700" fill="none" viewBox="0 0 24 24"
                  stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -29,7 +29,7 @@
 
     <div class="ideas-container py-6 space-y-6">
         <div class="idea-container bg-white rounded-lg flex hover:shadow-card cursor-pointer transition duration-150 ease-in">
-            <div class="px-5 py-8 border-r border-gray-100">
+            <div class="hidden md:block border-r border-gray-100 px-5 py-8">
                 <div class="text-center">
                     <div class="font-semibold text-2xl">12</div>
                     <div class="text-gray-500">Votes</div>
@@ -42,8 +42,8 @@
                     </button>
                 </div>
             </div>
-            <div class="flex flex-1 px-2 py-6">
-                <div class="flex-none">
+            <div class="flex flex-col md:flex-row flex-1 px-2 py-6">
+                <div class="flex-none mx-4 md:mx-0">
                     <a href="#">
                         <img src="https://source.unsplash.com/200x200/?face&crop=face&v=1" alt="avatar"
                              class="w-14 h-14 rounded-lg">
@@ -51,14 +51,14 @@
                 </div>
 
                 <div class="w-full flex flex-col justify-between mx-4 ">
-                    <h4 class="text-xl font-semibold">
+                    <h4 class="text-xl font-semibold mt-2 md:mt-0">
                         <a href="#" class="hover:underline">An idea title goes here</a>
                     </h4>
                     <div class="mt-4 text-gray-600 line-clamp-3">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     </div>
 
-                    <div class="flex items-center justify-between mt-6">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mt-6">
                         <div class="flex items-center text-xs font-semibold space-x-2 text-gray-400">
                             <div>10 hours ago</div>
                             <div>&bull;</div>
@@ -67,7 +67,7 @@
                             <div class="text-gray-700">3 comments</div>
                         </div>
 
-                        <div class="flex items-center space-x-2">
+                        <div class="flex items-center space-x-2 mt-3 md:mt-0">
                             <div
                                 class="bg-gray-200 text-xxs font-bold uppercase rounded-full text-center w-24 px-4 py-2 leading-none h-7">
                                 Open
@@ -91,7 +91,7 @@
                                     x-show.transition="isOpen"
                                     @click.away="isOpen = false"
                                     @keydown.escape.window="isOpen = false"
-                                    class="absolute w-40 bg-white font-semibold shadow-dialog rounded-lg py-2 ml-12"
+                                    class="absolute w-40 bg-white font-semibold shadow-dialog rounded-lg py-2 md:ml-12 top-8 md:top-6 right-0 md:left-0"
                                 >
                                     <li>
                                         <a href="#" class="block hover:bg-gray-100 transition duration-150 ease-in px-5 py-2">Mark as Spam</a>
@@ -101,6 +101,20 @@
                                     </li>
                                 </ul>
                             </div>
+                        </div>
+
+                        <div class="flex items-center md:hidden mt-4 md:mt-0">
+                            <div class="bg-gray-100 text-center rounded-lg h-10 px-4 py-2 pr-8">
+                                <div class="text-sm font-bold leading-none">
+                                    12
+                                </div>
+                                <div class="text-xxs font-semibold leading-none text-gray-400">
+                                    Votes
+                                </div>
+                            </div>
+                            <button class="w-20 bg-gray-200 border border-gray-200 font-bold text-xs uppercase rounded-lg hover:border-gray-400 transition ease-in px-4 py-3 -ml-5">
+                                Vote
+                            </button>
                         </div>
                     </div>
                 </div>

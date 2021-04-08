@@ -17,9 +17,9 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body class="bg-gray-background font-sans text-gray-900 text-sm antialiased">
-<header class="px-8 py-4 flex items-center justify-between">
+<header class="flex flex-col md:flex-row items-center justify-between px-8 py-4">
     <a href="/"><img src="{{ asset('images/logo.svg') }}" alt="logo"></a>
-    <div class="flex items-center">
+    <div class="flex items-center mt-2 md:mt-0">
         @if (Route::has('login'))
             <div class="px-6 py-4">
                 @auth
@@ -46,10 +46,10 @@
 </header>
 
 <!-- Page Content -->
-<main class="container flex mx-auto max-w-custom">
-    <div class="w-70 mr-5">
+<main class="container flex flex-col md:flex-row mx-auto max-w-custom">
+    <div class="w-70 mx-auto md:mx-0 md:mr-5">
         <div
-            class="bg-white sticky top-8 border-2 border-blue mt-14 rounded-lg"
+            class="bg-white md:sticky md:top-8 border-2 border-blue mt-14 rounded-lg"
             style="
                 border-image-source: linear-gradient(to bottom, rgba(50, 138, 241, 0.22), rgba(99, 123, 255, 0));
                 border-image-slice: 1;
@@ -92,8 +92,8 @@
             </div>
         </div>
     </div>
-    <div class="w-175">
-        <nav class="flex items-center justify-between text-xs">
+    <div class="w-full md:w-175 px-3 md:px-0">
+        <nav class="hidden md:flex items-center justify-between text-xs">
             <ul class="flex uppercase font-semibold border-b-4 pb-3 space-x-8">
                 <li><a href="#" class="border-b-4 pb-3 border-blue">All Ideas (87)</a></li>
                 <li><a href="#" class="text-gray-400 transition ease-in duration-150 border-b-4 pb-3 hover:border-blue">Considering (12)</a></li>
