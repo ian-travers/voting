@@ -49,7 +49,7 @@
 <main class="container flex mx-auto max-w-custom">
     <div class="w-70 mr-5">
         <div
-            class="bg-white border-2 border-blue mt-14 rounded-lg"
+            class="bg-white sticky top-8 border-2 border-blue mt-14 rounded-lg"
             style="
                 border-image-source: linear-gradient(to bottom, rgba(50, 138, 241, 0.22), rgba(99, 123, 255, 0));
                 border-image-slice: 1;
