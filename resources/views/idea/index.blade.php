@@ -54,7 +54,7 @@
 
                     <div class="w-full flex flex-col justify-between mx-4 ">
                         <h4 class="text-xl font-semibold mt-2 md:mt-0">
-                            <a href="#" class="hover:underline">{{ $idea->title }}</a>
+                            <a href="{{ route('idea.show', $idea) }}" class="hover:underline">{{ $idea->title }}</a>
                         </h4>
                         <div class="mt-4 text-gray-600 line-clamp-3">
                             {{ $idea->description }}

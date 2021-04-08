@@ -35,15 +35,9 @@ class IdeaController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Idea  $idea
-     * @return \Illuminate\Http\Response
-     */
     public function show(Idea $idea)
     {
-        //
+        return view('idea.show', compact('idea'));
     }
 
     /**
