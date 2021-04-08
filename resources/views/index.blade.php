@@ -44,7 +44,7 @@
             </div>
             <div class="flex flex-1 px-2 py-6">
                 <div class="flex-none">
-                    <a href="###">
+                    <a href="#">
                         <img src="https://source.unsplash.com/200x200/?face&crop=face&v=1" alt="avatar"
                              class="w-14 h-14 rounded-lg">
                     </a>
@@ -72,16 +72,27 @@
                                 class="bg-gray-200 text-xxs font-bold uppercase rounded-full text-center w-24 px-4 py-2 leading-none h-7">
                                 Open
                             </div>
-                            <div class="relative">
+                            <div
+                                x-data="{ isOpen: false }"
+                                class="relative"
+                            >
                                 <button
-                                    class="bg-gray-100 hover:bg-gray-200 rounded-full border h-7 px-4 py-2 transition duration-150 ease-in">
+                                    @click="isOpen = !isOpen"
+                                    class="bg-gray-100 hover:bg-gray-200 rounded-full border h-7 px-4 py-2 transition duration-150 ease-in"
+                                >
                                     <svg class="text-gray-400 hover:text-gray-500" fill="currentColor" width="24"
                                          height="6">
                                         <path
                                             d="M2.97.061A2.969 2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97 2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 2.97 0 0021.03.06z"></path>
                                     </svg>
                                 </button>
-                                <ul class="absolute w-40 bg-white font-semibold shadow-dialog rounded-lg py-2 ml-12">
+                                <ul
+                                    x-cloak
+                                    x-show.transition="isOpen"
+                                    @click.away="isOpen = false"
+                                    @keydown.escape.window="isOpen = false"
+                                    class="absolute w-40 bg-white font-semibold shadow-dialog rounded-lg py-2 ml-12"
+                                >
                                     <li>
                                         <a href="#" class="block hover:bg-gray-100 transition duration-150 ease-in px-5 py-2">Mark as Spam</a>
                                     </li>

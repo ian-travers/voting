@@ -2,6 +2,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+[x-cliak] {
+    display: none !important;
+}
+
 /* vertical line to the left of the comments */
 .comments-container::before {
     position: absolute;
@@ -33,7 +37,8 @@
     content: "";
     width: 3px;
     height: calc(100% - 60px);
-    background: theme(colors.gray-background);
+    /*background: theme(colors.gray-background);*/
+    background: #f7f8fc;
 }
 
 .is-admin::before {
@@ -44,6 +49,7 @@
     border-radius: 38px;
     border: 7px solid white;
     box-shadow: 4px 4px 15px 0 rgba(37, 38, 39, .08);
-    background: theme(colors.purple);
+    /*background: theme(colors.purple);*/
+    background: #8b60ed;
     opacity: 1;
 }
