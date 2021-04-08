@@ -12,9 +12,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    @livewireStyles
 </head>
 <body class="bg-gray-background font-sans text-gray-900 text-sm antialiased">
 <header class="flex flex-col md:flex-row items-center justify-between px-8 py-4">
@@ -111,5 +109,8 @@
 
     </div>
 </main>
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}"></script>
+@livewireScripts
 </body>
 </html>
