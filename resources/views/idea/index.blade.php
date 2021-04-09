@@ -89,7 +89,7 @@
                                         </svg>
                                     </button>
                                     <ul
-                                        x-cloak
+                                        style="display: none"
                                         x-show.transition="isOpen"
                                         @click.away="isOpen = false"
                                         @keydown.escape.window="isOpen = false"
