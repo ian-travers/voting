@@ -11,6 +11,8 @@ class Idea extends Model
 {
     use HasFactory, Sluggable;
 
+    public const PAGINATION_COUNT = 6;
+
     protected $guarded = [];
 
     public function user(): BelongsTo
