@@ -129,4 +129,8 @@
             </div><!-- End idea container -->
         @endforeach
     </div><!-- End ideas container -->
+
+    <div class="my-2">
+        {{ $ideas->links() }}
+    </div>
 </x-app-layout>
