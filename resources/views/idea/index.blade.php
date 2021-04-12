@@ -82,7 +82,7 @@
                             <div class="flex items-center space-x-2 mt-3 md:mt-0">
                                 <div
                                     class="bg-gray-200 text-xxs font-bold uppercase rounded-full text-center w-24 px-4 py-2 leading-none h-7">
-                                    Open
+                                    {{ $idea->status->name }}
                                 </div>
                                 <div
                                     x-data="{ isOpen: false }"
