@@ -27,21 +27,21 @@ class ShowIdeasTest extends TestCase
             ->assertSuccessful()
             ->assertSee($idea01->title)
             ->assertSee($idea01->description)
+            ->assertSee($idea01->category->name)
             ->assertSee($idea02->title)
-            ->assertSee($idea02->description);
+            ->assertSee($idea02->description)
+            ->assertSee($idea02->category->name);
     }
 
     /** @test */
     function single_idea_shows_correctly_on_the_show_page()
     {
-        $idea = Idea::factory()->create([
-            'title' => 'My first idea title',
-            'description' => 'My first idea description',
-        ]);
+        $idea = Idea::factory()->create();
 
         $this->get(route('idea.show', $idea))
             ->assertSuccessful()
             ->assertSee($idea->title)
+            ->assertSee($idea->category->name)
             ->assertSee($idea->description);
     }
 
@@ -51,12 +51,7 @@ class ShowIdeasTest extends TestCase
         Idea::factory(Idea::PAGINATION_COUNT + 1)->create();
 
         $ideaFirst = Idea::find(1);
-        $ideaFirst->title = 'My first idea';
-        $ideaFirst->save();
-
         $ideaLast = Idea::find(Idea::PAGINATION_COUNT + 1);
-        $ideaLast->title = 'My last idea';
-        $ideaLast->save();
 
         $this->get(route('idea.index'))
             ->assertSee($ideaFirst->title)
