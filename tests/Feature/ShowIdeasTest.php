@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\Auth;
+namespace Tests\Feature;
 
 use App\Models\Idea;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -45,28 +45,7 @@ class ShowIdeasTest extends TestCase
             ->assertSee($idea->description);
     }
 
-    /** @test */
-    function ideas_pagination_works()
-    {
-        Idea::factory(Idea::PAGINATION_COUNT + 1)->create();
-
-        $ideaFirst = Idea::find(1);
-        $ideaLast = Idea::find(Idea::PAGINATION_COUNT + 1);
-
-        $this->get(route('idea.index'))
-            ->assertSee($ideaFirst->title)
-            ->assertDontSee($ideaLast->title);
-
-        $this->get(route('idea.index'))
-            ->assertSee($ideaFirst->title)
-            ->assertDontSee($ideaLast->title);
-
-        $this->get(route('idea.index', ['page' => 2]))
-            ->assertDontSee($ideaFirst->title)
-            ->assertSee($ideaLast->title);
-    }
-
-    /** @test */
+        /** @test */
     function same_idea_title_different_slugs()
     {
         $idea01 = Idea::factory()->create([

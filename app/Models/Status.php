@@ -10,6 +10,12 @@ class Status extends Model
 {
     use HasFactory;
 
+    const STATUS_OPEN = 'Open';
+    const STATUS_CONSIDERING = 'Considering';
+    const STATUS_IN_PROGRESS = 'In progress';
+    const STATUS_IMPLEMENTED = 'Implemented';
+    const STATUS_CLOSED = 'Closed';
+
     protected $guarded = [];
 
     public function ideas(): HasMany
@@ -20,16 +26,16 @@ class Status extends Model
     public function allClasses(): array
     {
         return [
-            'Open' => 'bg-gray-200',
-            'Considering' => 'bg-purple text-white',
-            'In progress' => 'bg-yellow text-white',
-            'Implemented' => 'bg-green text-white',
-            'Closed' => 'bg-red text-white',
+            self::STATUS_OPEN => 'bg-gray-200',
+            self::STATUS_CONSIDERING => 'bg-purple text-white',
+            self::STATUS_IN_PROGRESS => 'bg-yellow text-white',
+            self::STATUS_IMPLEMENTED => 'bg-green text-white',
+            self::STATUS_CLOSED => 'bg-red text-white',
         ];
     }
 
     public function getClasses(): string
     {
-        return $this->allClasses()[$this->name];
+        return $this->allClasses()[$this->name] ?? 'bg-gray-200';
     }
 }
