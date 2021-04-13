@@ -5,7 +5,6 @@ namespace App\Models;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Idea extends Model
 {
@@ -15,19 +14,24 @@ class Idea extends Model
 
     protected $guarded = [];
 
-    public function user(): BelongsTo
+    public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function category(): BelongsTo
+    public function category()
     {
         return $this->belongsTo(Category::class);
     }
 
-    public function status(): BelongsTo
+    public function status()
     {
         return $this->belongsTo(Status::class);
+    }
+
+    public function votes()
+    {
+        return $this->belongsToMany(User::class, 'votes');
     }
 
     public function sluggable(): array
