@@ -4,7 +4,6 @@ namespace App\Http\Livewire;
 
 use App\Models\Category;
 use App\Models\Idea;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Livewire\Component;
 
@@ -20,7 +19,7 @@ class CreateIdea extends Component
         'description' => 'required',
     ];
 
-    public function createIdea(): RedirectResponse
+    public function createIdea()
     {
         if (!auth()->check()) {
             abort(Response::HTTP_FORBIDDEN);
