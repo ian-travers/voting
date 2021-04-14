@@ -34,6 +34,11 @@ class Idea extends Model
         return $this->belongsToMany(User::class, 'votes');
     }
 
+    public function isVotedByUser(User $user)
+    {
+        return $this->votes()->where('user_id', $user->id)->exists();
+    }
+
     public function sluggable(): array
     {
         return [
