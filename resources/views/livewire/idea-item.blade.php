@@ -12,8 +12,8 @@
     class="idea-container bg-white rounded-lg flex hover:shadow-card cursor-pointer transition duration-150 ease-in">
     <div class="hidden md:block border-r border-gray-100 px-5 py-8">
         <div class="text-center">
-            <div class="font-semibold text-2xl {{ $idea->voted_by_current_user ? 'text-blue' : '' }}">
-                {{ $idea->votes_count }}
+            <div class="font-semibold text-2xl {{ $hasVotedByCurrentUser ? 'text-blue' : '' }}">
+                {{ $votesCount }}
             </div>
             <div class="text-gray-500">
                 Votes
@@ -21,13 +21,15 @@
         </div>
 
         <div class="mt-8">
-            @if($idea->voted_by_current_user)
+            @if($hasVotedByCurrentUser)
                 <button
+                    wire:click.prevent="toggleVote"
                     class="px-4 py-3 rounded-lg text-xxs font-bold w-20 bg-blue text-white uppercase border border-blue hover:bg-blue-hover transition ease-in duration-150">
                     Voted
                 </button>
             @else
                 <button
+                    wire:click.prevent="toggleVote"
                     class="px-4 py-3 rounded-lg text-xxs font-bold w-20 bg-gray-200 uppercase border border-gray-200 hover:border-gray-400 transition ease-in duration-150">
                     Vote
                 </button>
@@ -101,20 +103,22 @@
 
                 <div class="flex items-center md:hidden mt-4 md:mt-0">
                     <div class="bg-gray-100 text-center rounded-lg h-10 px-4 py-2 pr-8">
-                        <div class="text-sm font-bold leading-none {{ $idea->voted_by_current_user ? 'text-blue' : '' }}">
-                            {{ $idea->votes_count }}
+                        <div class="text-sm font-bold leading-none {{ $hasVotedByCurrentUser ? 'text-blue' : '' }}">
+                            {{ $votesCount }}
                         </div>
                         <div class="text-xxs font-semibold leading-none text-gray-400">
                             Votes
                         </div>
                     </div>
-                    @if($idea->voted_by_current_user)
+                    @if($hasVotedByCurrentUser)
                         <button
+                            wire:click.prevent="toggleVote"
                             class="w-20 bg-blue text-white border border-blue font-bold text-xs uppercase rounded-lg hover:bg-blue-hover transition ease-in px-4 py-3 -ml-5">
                             Voted
                         </button>
                     @else
                         <button
+                            wire:click.prevent="toggleVote"
                             class="w-20 bg-gray-200 border border-gray-200 font-bold text-xs uppercase rounded-lg hover:border-gray-400 transition ease-in px-4 py-3 -ml-5">
                             Vote
                         </button>

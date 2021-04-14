@@ -68,20 +68,22 @@
 
                     <div class="flex items-center md:hidden mt-4 md:mt-0">
                         <div class="bg-gray-100 text-center rounded-lg h-10 px-4 py-2 pr-8">
-                            <div class="text-sm font-bold leading-none {{ $hasVoted ? 'text-blue' : '' }}">
+                            <div class="text-sm font-bold leading-none {{ $hasVotedByCurrentUser ? 'text-blue' : '' }}">
                                 {{ $votesCount }}
                             </div>
                             <div class="text-xxs font-semibold leading-none text-gray-400">
                                 Votes
                             </div>
                         </div>
-                        @if($hasVoted)
+                        @if($hasVotedByCurrentUser)
                             <button
+                                wire:click.prevent="toggleVote"
                                 class="w-20 bg-blue text-white border border-blue font-bold text-xs uppercase rounded-lg hover:bg-blue-hover transition ease-in px-4 py-3 -ml-5">
                                 Voted
                             </button>
                         @else
                             <button
+                                wire:click.prevent="toggleVote"
                                 class="w-20 bg-gray-200 border border-gray-200 font-bold text-xs uppercase rounded-lg hover:border-gray-400 transition ease-in px-4 py-3 -ml-5">
                                 Vote
                             </button>
@@ -224,20 +226,22 @@
         </div>
         <div class="hidden md:flex items-center space-x-3">
             <div class="bg-white font-semibold text-center rounded-lg px-3 py-2">
-                <div class="text-xl leading-snug {{ $hasVoted ? 'text-blue' : '' }}">
+                <div class="text-xl leading-snug {{ $hasVotedByCurrentUser ? 'text-blue' : '' }}">
                     {{ $votesCount }}
                 </div>
                 <div class="text-xs leading-none text-gray-400">
                     Votes
                 </div>
             </div>
-            @if($hasVoted)
+            @if($hasVotedByCurrentUser)
                 <button type="button"
+                        wire:click.prevent="toggleVote"
                         class="w-36 h-11 text-xs font-semibold uppercase bg-blue text-white border border-blue hover:bg-blue-hover rounded-lg transition duration-150 ease-in">
                     Voted
                 </button>
             @else
                 <button type="button"
+                        wire:click.prevent="toggleVote"
                         class="w-36 h-11 text-xs font-semibold uppercase bg-gray-200 border border-gray-200 hover:border-gray-400 rounded-lg transition duration-150 ease-in">
                     Vote
                 </button>

@@ -8,16 +8,31 @@ use Livewire\Component;
 class IdeaShow extends Component
 {
     public Idea $idea;
-    public int $votesCount;
-    public bool $hasVoted;
+    public int $votesCount = 0;
+    public bool $hasVotedByCurrentUser = false;
 
     public function mount()
     {
         $this->votesCount = $this->idea->votes()->count();
 
-        $this->hasVoted = auth()->check()
+        $this->hasVotedByCurrentUser = auth()->check()
             ? $this->idea->isVotedByUser(auth()->user())
             : false;
+    }
+
+    public function toggleVote()
+    {
+        if (auth()->guest()) {
+            return redirect()->route('login');
+        }
+
+        $this->idea->toggleVote(auth()->user());
+
+        $this->hasVotedByCurrentUser = !$this->hasVotedByCurrentUser;
+
+        $this->hasVotedByCurrentUser
+            ? $this->votesCount++
+            : $this->votesCount--;
     }
 
     public function render()

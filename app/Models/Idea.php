@@ -39,6 +39,13 @@ class Idea extends Model
         return $this->votes()->where('user_id', $user->id)->exists();
     }
 
+    public function toggleVote(User $user): void
+    {
+        $this->isVotedByUser($user)
+            ? $this->votes()->detach($user)
+            : $this->votes()->attach($user);
+    }
+
     public function sluggable(): array
     {
         return [

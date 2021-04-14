@@ -28,4 +28,22 @@ class IdeaTest extends TestCase
 
         $this->assertTrue($idea->isVotedByUser($user));
     }
+
+    /** @test */
+    function user_can_toggle_vote_for_idea()
+    {
+        /** @var User $user */
+        $user = User::factory()->create();
+
+        /** @var Idea $idea */
+        $idea = Idea::factory()->create();
+
+        $idea->toggleVote($user);
+
+        $this->assertTrue($idea->isVotedByUser($user));
+
+        $idea->toggleVote($user);
+
+        $this->assertFalse($idea->isVotedByUser($user));
+    }
 }
